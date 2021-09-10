@@ -102,3 +102,46 @@ var swiper = new Swiper(".blog-slider", {
   keyboard: true,
 });
 console.log("Portfolio is working :-)");
+
+// Scroll up section
+
+function scrollUp() {
+  const scrollup = document.getElementById("scroll-up");
+  // When the scroll is higher that 560 viewpoint / height ,
+  // then the scroll up button will appear
+  // and on clicking should reach the top of the page
+  if (this.scrollY >= 560) {
+    scrollup.classList.add("show-scroll");
+  } else {
+    scrollup.classList.remove("show-scroll");
+  }
+  console.log("scroll is working :-)");
+}
+
+window.addEventListener("scroll", scrollUp);
+
+// Scroll section active HIGHLIGHT
+
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+  console.log("scroll active is working :-)");
+}
+window.addEventListener("scroll", scrollActive);
