@@ -1344,6 +1344,10 @@ form textarea {
     margin-top: var(--mb-0-25);
   }
 
+  .home__data {
+    transform: translateX(-0.8rem);
+  }
+
   .home__scroll-mouse {
     margin-top: var(--mb-0-25);
   }
@@ -1351,8 +1355,13 @@ form textarea {
   .about {
     margin-top: 6rem;
   }
+
   .qualification__data {
     gap: 0.5rem;
+  }
+
+  .qualification__start-icon {
+    transform: translateY(1.2rem);
   }
 
   .contact_mail {
@@ -1380,6 +1389,7 @@ form textarea {
   }
   .home__data {
     grid-column: initial;
+    transform: translateX(-1rem);
   }
 
   .about__container,
@@ -1545,6 +1555,11 @@ form textarea {
 
   .home__social {
     transform: translateX(-7.5rem);
+  }
+
+  .home__data {
+    grid-column: initial;
+    transform: translateX(-6rem);
   }
 
   .contact__form {
